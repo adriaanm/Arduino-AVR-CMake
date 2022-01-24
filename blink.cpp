@@ -1,15 +1,13 @@
 #include <Arduino.h>
 
 void setup() {
-    Serial.begin(115200);
     delay(2000);
-    Serial.println("Hello, world!");
-    pinMode(LED_BUILTIN, OUTPUT);
+    pinMode(0, OUTPUT);
 }
 
 void loop() {
-    digitalWrite(LED_BUILTIN, HIGH);
+    digitalWrite(0, HIGH);
     delay(500);
-    digitalWrite(LED_BUILTIN, LOW);
+    digitalWrite(0, LOW);
     delay(500);
 }

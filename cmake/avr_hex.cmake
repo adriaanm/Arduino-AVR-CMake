@@ -1,6 +1,6 @@
 # Transforms the target.elf file into target.eep (EEPROM) and target.hex files.
 # Also prints the size of each section in target.elf.
-function(arduino_avr_hex target)
+function(avr_hex target)
     set_target_properties(${target} PROPERTIES SUFFIX ".elf")
     add_custom_command(TARGET ${target} POST_BUILD
         COMMAND ${CMAKE_SIZE} ARGS 
