@@ -22,3 +22,9 @@ function(avr_hex target)
             "$<TARGET_FILE:${target}>"
             ${target}.hex)
 endfunction()
+
+# Creates a target upload-target that uses micronucleus to upload target.hex
+function(avr_micronucleus_upload target)
+    add_custom_target(upload-${target} COMMAND ${MICRONUCLEUS} "$<TARGET_FILE_BASE_NAME:${target}>.hex")
+    add_dependencies(upload-${target} ${target})
+endfunction()
