@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "avr",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/Cellar/avr-gcc@9/9.3.0_3/avr/include/**"
+            ],
+            "defines": [
+                "__AVR_ATtiny85__"
+            ],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/opt/homebrew/bin/avr-gcc",
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "macos-gcc-x86",
+            "compilerArgs": [
+                "-mmcu=avr25"
+            ],
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
